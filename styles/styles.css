@@ -1,0 +1,260 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+  font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    position: relative;
+    animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 300px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+
+#hero {
+    
+    
+   background-color: bisque;
+   background-position: 100%;
+  
+   height: 100%;
+   width: 100%;
+    color: black;
+    
+    padding: 100px 20px;
+}
+
+.img-size{
+    height: 400px;
+    width: 400px;
+}
+h1{
+    position: relative;
+    margin: 0;
+    font-size: 4em;
+    font-weight: 900;
+    color: #fff;
+    z-index: 1;
+overflow: hidden;
+}
+h1:before
+{
+content: '';
+position: absolute;
+left: 110%;
+width: 120%;
+height: 100%;
+background: linear-gradient(90deg,transparent 0%, #000 5%, #000 100%);
+animation: animate 5.5s liner forwards;
+}
+@keyframes animate
+{
+   0%
+   {left: 110%;}
+   100%
+   {
+    left: -20%;
+   }
+}
+
+.card{
+    color: darkcyan;
+    
+}
+.black{color: black;}
+
+#hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.0em;
+    margin: 10px 0;
+}
+
+#countdown {
+    font-size: 2em;
+    margin-top: 20px;
+    
+    color:darkcyan ;
+
+}
+#days{color: orange}
+#hours{color: palevioletred;}
+#minutes{color: brown;}
+#seconds{color: blueviolet;}
+
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+#memories{
+    background-image:url(../images/birthday-img-6.jpg);
+    height: 800px;
+    width: 100%;
+    
+    
+    
+}
+#gallery{
+    background-color: lightgrey;
+   
+}
+
+
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    
+    
+}
+.feature-card{
+    padding: 30px;
+     border-radius: 5px; 
+    box-shadow: 0 4px 30px 0 black;
+     margin-bottom: 20px; 
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+#video{
+    background-color: rgba(90, 140, 205, 0.493);
+}
+
+form {
+    margin: 20px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: blueviolet;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #e68900;
+}
+#guestbook{
+    background-color: rgba(43, 122, 226, 0.822);
+}
+#contact{
+    background-color: rgba(90, 140, 205, 0.493);
+ 
+}
+.Sponspors-info{
+    max-width: 540px;
+    margin: 50px auto;
+   text-align: center;
+}
+
+.sponcers-companyes{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+
+.sponcers-companyes img{
+    /* filter: grayscale(100%); */
+}
+@media (max-width: 600px) {
+    .box paragraph{
+        width: 50px;
+        height: 50px;
+        animation: move-small 2s ease-in-out infinite;
+    }
+
+    @keyframes move-small {
+        0% {
+            left: 0;
+        }
+        50% {
+            left: 100px;
+        }
+        100% {
+            left: 0;
+        }
+    }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .box {
+        width: 80px;
+        height: 80px;
+        animation: move-medium 2.5s ease-in-out infinite;
+    }
+
+    @keyframes move-medium {
+        0% {
+            left: 0;
+        }
+        50% {
+            left: 200px;
+        }
+        100% {
+            left: 0;
+        }
+    }
+}
+
+/* For large devices (desktops) */
+@media (min-width: 1025px) {
+    .box {
+        width: 120px;
+        height: 120px;
+        animation: move-large 3s ease-in-out infinite;
+    }
+
+    @keyframes move-large {
+        0% {
+            left: 0;
+        }
+        50% {
+            left: 300px;
+        }
+        100% {
+            left: 0;
+        }
+    }
+}
